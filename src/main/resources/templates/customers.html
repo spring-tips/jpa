@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        Customer View
+    </title>
+</head>
+<body>
+
+<div th:each="c: ${customers}">
+
+    <h2><span th:text="${c.first}">first</span> <span th:text="${c.last}">last</span></h2>
+
+    <div th:each="o : ${c.orders}">
+        <span th:text="${o.id}">ID</span>
+        <span th:text="${o.sku}">SKU</span>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
